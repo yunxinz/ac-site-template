@@ -1,0 +1,94 @@
+---
+import { type ProjectsSchema } from "../content/config";
+import BaseLayout from "./BaseLayout.astro";
+import dayjs from "dayjs";
+import localizedFormat from "dayjs/plugin/localizedFormat";
+
+export interface Props extends ProjectsSchema {}
+
+const {
+    title,
+    description,
+    pubDate,
+    updatedDate,
+    heroImage,
+    badge,
+    tags = [],
+    github,
+    liveUrl,
+} = Astro.props;
+dayjs.extend(localizedFormat);
+const displayDate = dayjs(pubDate).format("ll");
+import { Image } from "astro:assets";
+---
+
+<BaseLayout
+    title={"Yunxin | " + title}
+    description={description}
+    image={heroImage}
+    ,
+    ogType="article"
+>
+    <main class="md:flex md:justify-center">
+        <article class="prose prose-lg max-w-[750px] prose-img:mx-auto">
+            {
+                heroImage && (
+                    <Image
+                        width={750}
+                        height={422}
+                        format="png"
+                        src={heroImage}
+                        alt={title}
+                        class="w-full mb-6"
+                    />
+                )
+            }
+            <h1 class="title my-2 text-4xl font-bold">{title}</h1>
+            {pubDate && <time>{displayDate}</time>}
+            <br />
+            {badge && <div class="badge badge-secondary my-1">{badge}</div>}
+
+            <div class="mt-2">
+                {
+                    tags &&
+                        tags.map((tag) => (
+                            <a
+                                href={`/projects/tag/${tag}`}
+                                class="badge badge-outline ml-2 no-underline"
+                            >
+                                {tag}
+                            </a>
+                        ))
+                }
+            </div>
+
+            <div class="mt-2">
+                {
+                    github && (
+                        <a
+                            href={github}
+                            target="_blank"
+                            class="btn btn-sm rounded-full"
+                        >
+                            View source on GitHub
+                        </a>
+                    )
+                }
+                {
+                    liveUrl && (
+                        <a
+                            href={liveUrl}
+                            target="_blank"
+                            class="btn btn-sm rounded-full"
+                        >
+                            Live Demo
+                        </a>
+                    )
+                }
+
+                <div class="divider my-2"></div>
+                <slot />
+            </div>
+        </article>
+    </main>
+</BaseLayout>
