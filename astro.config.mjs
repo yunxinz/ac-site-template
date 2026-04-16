@@ -14,4 +14,9 @@ export default defineConfig({
         remarkPlugins: [remarkMath],
         rehypePlugins: [rehypeKatex],
     },
+    vite: {
+        server: {
+            maxHeaderSize: 32768,
+        },
+    },
 });
