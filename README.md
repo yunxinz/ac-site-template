@@ -70,22 +70,17 @@ The top and bottom of each page use theme-aware banners. Provide light and dark 
 
 Sidebar navigation uses square icons from `public/`. Replace them with your own or keep the included set:
 
-| Page     | Icon file        |
-|----------|-----------------|
-| Home     | `nookmiles.png` |
-| Projects | `brush.png`     |
-| CV       | `nookwallet.png`|
-| Blog     | `photos.png`    |
-| Personal | `nookcritters.png`|
-| Notes    | `drawing.png`   |
-| Contact  | `messages.png`  |
+| Page     | Icon file          |
+| -------- | ------------------ |
+| Home     | `nookmiles.png`    |
+| Projects | `brush.png`        |
+| CV       | `nookwallet.png`   |
+| Blog     | `photos.png`       |
+| Personal | `nookcritters.png` |
+| Notes    | `drawing.png`      |
+| Contact  | `messages.png`     |
 
 Theme toggle uses `leaf_light.png` / `leaf_dark.png`.
-
-### 7. Divider images
-
-- `public/divider_line.png` — light theme section divider
-- `public/divider_line_dark.png` — dark theme section divider
 
 ## Content
 
@@ -142,21 +137,21 @@ tags: [tag1, tag2]
 
 Edit these Astro files to customize page content:
 
-| Page       | File                    |
-|------------|------------------------|
-| Home       | `src/pages/index.astro` |
-| Projects   | `src/pages/projects.astro`|
-| CV/Resume  | `src/pages/cv.astro`    |
-| Personal   | `src/pages/personal.astro`|
-| Blog       | `src/pages/blog/index.astro`|
-| Notes      | `src/pages/notes/index.astro`|
+| Page      | File                          |
+| --------- | ----------------------------- |
+| Home      | `src/pages/index.astro`       |
+| Projects  | `src/pages/projects.astro`    |
+| CV/Resume | `src/pages/cv.astro`          |
+| Personal  | `src/pages/personal.astro`    |
+| Blog      | `src/pages/blog/index.astro`  |
+| Notes     | `src/pages/notes/index.astro` |
 
 ## Theming
 
 The design uses CSS custom properties defined in `src/styles/global.css`. The two themes are:
 
-| Token      | Day (Light)  | Night (Dark) |
-|------------|-------------|--------------|
+| Token      | Day (Light) | Night (Dark) |
+| ---------- | ----------- | ------------ |
 | Background | `#f7f3e7`   | `#374063`    |
 | Text       | `#877358`   | `#e2d6c8`    |
 | Primary    | `#2abaaa`   | `#2abaaa`    |
@@ -187,6 +182,7 @@ For a custom domain, add a `CNAME` file to `public/` and update the `site` field
 - [TailwindCSS](https://tailwindcss.com/) + [DaisyUI](https://daisyui.com/) — Styling
 - [Animal Crossing](https://www.nintendo.com/us/store/products/animal-crossing-new-horizons-switch/) by Nintendo — Visual inspiration
 - [animal-crossing-ui](https://github.com/guokaigdg/animal-crossing-ui) — Design reference
+- [okpng nookphone icons](https://okpng.gumroad.com/) - Icon assets
 
 ## License
 
