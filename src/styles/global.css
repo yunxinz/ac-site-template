@@ -51,23 +51,6 @@
     --ac-font: 'M PLUS Rounded 1c', 'Nunito Variable', 'Noto Serif SC Variable', sans-serif;
 }
 
-/* Dark mode overrides */
-[data-theme="night"] {
-    --ac-bg: #2d3748;
-    --ac-surface: #374151;
-    --ac-surface-hover: #4a5568;
-    --ac-border: #4a5568;
-    --ac-text: #e2d6c8;
-    --ac-text-light: #b0a595;
-    --ac-text-dark: #f0e8dc;
-    --ac-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-    --ac-shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.4);
-    --ac-shadow-inset: inset 0 2px 4px rgba(0, 0, 0, 0.3);
-    --ac-cream: #2d3748;
-    --ac-cream-dark: #1a202c;
-    --ac-sand: #4a5568;
-}
-
 /* AC 3D press-down button effect */
 .btn-ac {
     position: relative;
