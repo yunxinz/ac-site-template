@@ -1,3 +1,7 @@
+---
+import { url } from "../config";
+---
+
 <div
     class="block sticky pointer-events-none bottom-10 bg-ac-cream-dark justify-center h-12 [mask-image:linear-gradient(transparent,#000000)]"
 >
@@ -11,7 +15,7 @@
         aria-label="Toggle theme"
         title="Toggle theme"
     >
-        <img id="theme-icon" src="/leaf_light.png" alt="" class="w-5 h-5 rounded-ac-sm" />
+        <img id="theme-icon" src={url('leaf_light.png')} alt="" class="w-5 h-5 rounded-ac-sm" />
         <span id="theme-label">Dark Mode</span>
     </button>
 </div>
@@ -26,7 +30,7 @@
         aria-label="GitHub"
         title="GitHub"
     >
-        <img src="/news.png" alt="GitHub" class="w-5 h-5 rounded-ac-sm" />
+        <img src={url('news.png')} alt="GitHub" class="w-5 h-5 rounded-ac-sm" />
         <span>GitHub</span>
     </a>
 
@@ -37,7 +41,7 @@
         aria-label="LinkedIn"
         title="LinkedIn"
     >
-        <img src="/brewster.png" alt="LinkedIn" class="w-5 h-5 rounded-ac-sm" />
+        <img src={url('brewster.png')} alt="LinkedIn" class="w-5 h-5 rounded-ac-sm" />
         <span>LinkedIn</span>
     </a>
 
@@ -48,7 +52,7 @@
         aria-label="WhatsApp"
         title="WhatsApp"
     >
-        <img src="/whatsapp.png" alt="WhatsApp" class="w-5 h-5 rounded-ac-sm" />
+        <img src={url('whatsapp.png')} alt="WhatsApp" class="w-5 h-5 rounded-ac-sm" />
         <span>WhatsApp</span>
     </a>
 
@@ -59,7 +63,7 @@
         aria-label="Instagram"
         title="Instagram"
     >
-        <img src="/instagram.png" alt="Instagram" class="w-5 h-5 rounded-ac-sm" />
+        <img src={url('instagram.png')} alt="Instagram" class="w-5 h-5 rounded-ac-sm" />
         <span>Instagram</span>
     </a>
 </div>

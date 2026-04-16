@@ -2,6 +2,7 @@
 import SideBarFooter from "./SideBarFooter.astro";
 import { Image } from "astro:assets";
 import SideBarMenu from "./SideBarMenu.astro";
+import { url } from "../config";
 const { sideBarActiveItemID } = Astro.props;
 ---
 
@@ -11,7 +12,7 @@ const { sideBarActiveItemID } = Astro.props;
         class="px-2 pt-2 h-auto min-h-full w-[19rem] bg-ac-cream-dark text-ac-text flex flex-col"
     >
         <div class="w-fit mx-auto mt-5 mb-6">
-            <a href="/">
+            <a href={url('')}>
                 <div
                     class="avatar transition ease-in-out hover:scale-[102%] block m-auto"
                 >
@@ -21,7 +22,7 @@ const { sideBarActiveItemID } = Astro.props;
                             format="webp"
                             width={300}
                             height={300}
-                            src="/profile.jpg"
+                            src={url('profile.webp')}
                             alt="Profile image"
                         />
                     </div>

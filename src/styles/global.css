@@ -128,7 +128,7 @@
 }
 
 [data-theme="night"] .divider {
-    background-image: url("/divider_line_dark.png");
+    background-image: url("/divider_line.png");
 }
 
 /* AC-themed dividers using decorative image */
@@ -137,7 +137,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("/divider_line.png");
+    background-image: var(--divider-img, url("/divider_line.png"));
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;

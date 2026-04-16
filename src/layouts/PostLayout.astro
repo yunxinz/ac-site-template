@@ -18,7 +18,7 @@ const {
 dayjs.extend(localizedFormat);
 const displayDate = dayjs(pubDate).format("ll");
 import { Image } from "astro:assets";
-import { AUTHOR_INITIAL } from "../config";
+import { AUTHOR_INITIAL, url } from "../config";
 ---
 
 <BaseLayout

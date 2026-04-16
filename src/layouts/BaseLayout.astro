@@ -5,7 +5,7 @@ import Footer from "../components/Footer.astro";
 import SideBar from "../components/SideBar.astro";
 import { ViewTransitions } from "astro:transitions";
 
-import { SITE_TITLE, SITE_DESCRIPTION, TRANSITION_API } from "../config";
+import { SITE_TITLE, SITE_DESCRIPTION, TRANSITION_API, url, BASE_PATH } from "../config";
 
 const {
     image,
@@ -28,6 +28,7 @@ const {
             ogType={ogType}
         />
         {TRANSITION_API && <ViewTransitions />}
+        <Fragment set:html={`<style is:inline>:root{--divider-img:url("${url('divider_line.png')}")}</style>`} />
         <script is:inline>
             (function(){
                 var t = localStorage.getItem('theme');
@@ -41,7 +42,7 @@ const {
             <input id="my-drawer" type="checkbox" class="drawer-toggle" />
             <div class="drawer-content bg-base-100 rounded-tl-ac-xl relative min-h-screen flex flex-col">
                 <div class="w-full overflow-hidden pointer-events-none select-none">
-                    <img src="/header_banner_light.png" data-light-src="/header_banner_light.png" data-dark-src="/header_banner_dark.png" alt="" class="w-full theme-banner" />
+                    <img src={url('header_banner_light.png')} data-light-src={url('header_banner_light.png')} data-dark-src={url('header_banner_dark.png')} alt="" class="w-full theme-banner" />
                 </div>
                 <Header title={SITE_TITLE} />
                 <div class="md:flex md:justify-center flex-1">
@@ -52,7 +53,7 @@ const {
                 <Footer />
 
                 <div class="w-full overflow-hidden pointer-events-none select-none flex justify-end mt-auto">
-                    <img src="/banner_light.png" data-light-src="/banner_light.png" data-dark-src="/banner_dark.png" alt="" class="w-full theme-banner" />
+                    <img src={url('banner_light.png')} data-light-src={url('banner_light.png')} data-dark-src={url('banner_dark.png')} alt="" class="w-full theme-banner" />
                 </div>
             </div>
             {
@@ -62,6 +63,7 @@ const {
             }
         </div>
         <script is:inline>
+            var __BASE__ = `${BASE_PATH}`;
             function applyTheme(theme) {
                 document.documentElement.setAttribute('data-theme', theme);
                 localStorage.setItem('theme', theme);
@@ -70,7 +72,7 @@ const {
                 });
                 var icon = document.getElementById('theme-icon');
                 var label = document.getElementById('theme-label');
-                if (icon) icon.src = theme === 'night' ? '/leaf_light.png' : '/leaf_dark.png';
+                if (icon) icon.src = theme === 'night' ? __BASE__ + 'leaf_light.png' : __BASE__ + 'leaf_dark.png';
                 if (label) label.textContent = theme === 'night' ? 'Light Mode' : 'Dark Mode';
             }
             window.toggleTheme = function() {

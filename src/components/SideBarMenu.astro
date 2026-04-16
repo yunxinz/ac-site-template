@@ -1,4 +1,5 @@
 ---
+import { url } from "../config";
 const { sideBarActiveItemID } = Astro.props;
 const activeClass = "bg-ac-primary/15 text-ac-primary-dark rounded-ac-md";
 ---
@@ -8,9 +9,9 @@ const activeClass = "bg-ac-primary/15 text-ac-primary-dark rounded-ac-md";
         <a
             class="py-3 text-base rounded-ac-md transition-colors hover:bg-ac-sand"
             id="home"
-            href="/"
+            href={url('')}
         >
-            <img src="/nookmiles.png" alt="" class="w-6 h-6 rounded-ac-sm" />
+            <img src={url('nookmiles.png')} alt="" class="w-6 h-6 rounded-ac-sm" />
             Home
         </a>
     </li>
@@ -18,9 +19,9 @@ const activeClass = "bg-ac-primary/15 text-ac-primary-dark rounded-ac-md";
         <a
             class="py-3 text-base rounded-ac-md transition-colors hover:bg-ac-sand"
             id="projects"
-            href="/projects"
+            href={url('projects')}
         >
-            <img src="/brush.png" alt="" class="w-6 h-6 rounded-ac-sm" />
+            <img src={url('brush.png')} alt="" class="w-6 h-6 rounded-ac-sm" />
             Projects
         </a>
     </li>
@@ -28,9 +29,9 @@ const activeClass = "bg-ac-primary/15 text-ac-primary-dark rounded-ac-md";
         <a
             class="py-3 text-base rounded-ac-md transition-colors hover:bg-ac-sand"
             id="cv"
-            href="/cv"
+            href={url('cv')}
         >
-            <img src="/nookwallet.png" alt="" class="w-6 h-6 rounded-ac-sm" />
+            <img src={url('nookwallet.png')} alt="" class="w-6 h-6 rounded-ac-sm" />
             CV
         </a>
     </li>
@@ -38,9 +39,9 @@ const activeClass = "bg-ac-primary/15 text-ac-primary-dark rounded-ac-md";
         <a
             class="py-3 text-base rounded-ac-md transition-colors hover:bg-ac-sand"
             id="blog"
-            href="/blog/"
+            href={url('blog/')}
         >
-            <img src="/photos.png" alt="" class="w-6 h-6 rounded-ac-sm" />
+            <img src={url('photos.png')} alt="" class="w-6 h-6 rounded-ac-sm" />
             Blog
         </a>
     </li>
@@ -48,9 +49,9 @@ const activeClass = "bg-ac-primary/15 text-ac-primary-dark rounded-ac-md";
         <a
             class="py-3 text-base rounded-ac-md transition-colors hover:bg-ac-sand"
             id="personal"
-            href="/personal"
+            href={url('personal')}
         >
-            <img src="/nookcritters.png" alt="" class="w-6 h-6 rounded-ac-sm" />
+            <img src={url('nookcritters.png')} alt="" class="w-6 h-6 rounded-ac-sm" />
             Personal
         </a>
     </li>
@@ -58,9 +59,9 @@ const activeClass = "bg-ac-primary/15 text-ac-primary-dark rounded-ac-md";
         <a
             class="py-3 text-base rounded-ac-md transition-colors hover:bg-ac-sand"
             id="notes"
-            href="/notes"
+            href={url('notes')}
         >
-            <img src="/drawing.png" alt="" class="w-6 h-6 rounded-ac-sm" />
+            <img src={url('drawing.png')} alt="" class="w-6 h-6 rounded-ac-sm" />
             Notes
         </a>
     </li>
@@ -72,7 +73,7 @@ const activeClass = "bg-ac-primary/15 text-ac-primary-dark rounded-ac-md";
             target="_blank"
             referrerpolicy="no-referrer-when-downgrade"
         >
-            <img src="/messages.png" alt="" class="w-6 h-6 rounded-ac-sm" />
+            <img src={url('messages.png')} alt="" class="w-6 h-6 rounded-ac-sm" />
             Contact
         </a>
     </li>
