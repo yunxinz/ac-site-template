@@ -26,6 +26,9 @@ importers:
       '@fontsource-variable/nunito':
         specifier: ^5.2.5
         version: 5.2.5
+      '@fontsource/lxgw-wenkai-tc':
+        specifier: ^5.2.9
+        version: 5.2.9
       '@fontsource/m-plus-rounded-1c':
         specifier: ^5.2.10
         version: 5.2.10
@@ -352,6 +355,9 @@ packages:
 
   '@fontsource-variable/nunito@5.2.5':
     resolution: {integrity: sha512-XMrSfi1XrnM6HQA+MMdPVY/5tdnG4vamQScaesQRhaboP8g0dEjxbtUJY50KHFTh2MnQP5lHIyDFuMNM4Kb23A==}
+
+  '@fontsource/lxgw-wenkai-tc@5.2.9':
+    resolution: {integrity: sha512-0nwS6UdOqAfVivzGoPi0biPY9o2RvTnsca2ZBnd5wpIxu6ZVcca0ZF42n2QHkKIGc8+j+xbyhrT7qBQS6Ss3pg==}
 
   '@fontsource/m-plus-rounded-1c@5.2.10':
     resolution: {integrity: sha512-PLrYoJHCBMApU8zioMT+Un6TLr6JTI7lBJWXo+t2ZNdpEn1XqZG3Y3XvNuIxdX1F3m0UqvtEbtBMHgAbTdefOw==}
@@ -2515,6 +2521,8 @@ snapshots:
   '@fontsource-variable/noto-serif-sc@5.2.5': {}
 
   '@fontsource-variable/nunito@5.2.5': {}
+
+  '@fontsource/lxgw-wenkai-tc@5.2.9': {}
 
   '@fontsource/m-plus-rounded-1c@5.2.10': {}
 

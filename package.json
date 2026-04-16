@@ -18,6 +18,7 @@
     "@astrojs/tailwind": "^5.0.3",
     "@fontsource-variable/noto-serif-sc": "^5.2.5",
     "@fontsource-variable/nunito": "^5.2.5",
+    "@fontsource/lxgw-wenkai-tc": "^5.2.9",
     "@fontsource/m-plus-rounded-1c": "^5.2.10",
     "astro": "^4.0.2",
     "daisyui": "^4.4.10",
