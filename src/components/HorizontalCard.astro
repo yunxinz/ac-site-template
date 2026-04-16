@@ -5,7 +5,7 @@ const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
 ---
 
 <div
-  class="rounded-lg bg-base-100 hover:shadow-xl transition ease-in-out hover:scale-[102%]"
+  class="rounded-ac-lg bg-base-100 shadow-ac hover:shadow-ac-hover transition ease-in-out hover:scale-[102%] overflow-hidden"
 >
   <a href={url} target={target}>
     <div class="hero-content flex-col md:flex-row">
@@ -17,7 +17,7 @@ const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
             height={422}
             format="webp"
             alt={title}
-            class="max-w-full md:max-w-[13rem] rounded-lg"
+            class="max-w-full md:max-w-[13rem] rounded-ac-md"
           />
         )
       }
