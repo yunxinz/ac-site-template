@@ -29,6 +29,9 @@ importers:
       '@fontsource/m-plus-rounded-1c':
         specifier: ^5.2.10
         version: 5.2.10
+      '@mogeko/maple-mono-cn':
+        specifier: ^7.9.0
+        version: 7.9.0
       astro:
         specifier: ^4.0.2
         version: 4.0.2
@@ -400,6 +403,9 @@ packages:
 
   '@mdx-js/mdx@3.0.0':
     resolution: {integrity: sha512-Icm0TBKBLYqroYbNW3BPnzMGn+7mwpQOK310aZ7+fkCtiU3aqv2cdcX+nd0Ydo3wI5Rx8bX2Z2QmGb/XcAClCw==}
+
+  '@mogeko/maple-mono-cn@7.9.0':
+    resolution: {integrity: sha512-NZls63+8Q4+17saZqhN5sFB9UqIfyI73q+NNyXNQFmdzivzSYAKLCuo2yvheyEm95kuH8VEhwTl4YvbMoqIbFw==}
 
   '@napi-rs/wasm-runtime@1.1.4':
     resolution: {integrity: sha512-3NQNNgA1YSlJb/kMH1ildASP9HW7/7kYnRI2szWJaofaS1hWmbGI4H+d3+22aGzXXN9IJ+n+GiFVcGipJP18ow==}
@@ -2756,6 +2762,8 @@ snapshots:
       vfile: 6.0.1
     transitivePeerDependencies:
       - supports-color
+
+  '@mogeko/maple-mono-cn@7.9.0': {}
 
   '@napi-rs/wasm-runtime@1.1.4(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)':
     dependencies:

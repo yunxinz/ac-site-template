@@ -49,6 +49,12 @@
 
     /* Latin → Nunito, CJK → HarmonyOS Sans SC */
     --ac-font: 'Nunito Variable', 'HarmonyOS Sans SC', sans-serif;
+    --ac-font-mono: 'Maple Mono CN', ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+code, kbd, samp, pre {
+    font-family: var(--ac-font-mono);
+    font-size: 0.9em;
 }
 
 /* AC 3D press-down button effect */
