@@ -47,25 +47,8 @@
     /* Transitions */
     --ac-transition: all 0.2s ease;
 
-    /* Font — composite: Latin → M PLUS Rounded 1c, CJK → LXGW WenKai */
-    --ac-font: 'AC-UI', 'Nunito Variable', sans-serif;
-}
-
-/* Composite font family: Latin via Nunito Variable, CJK via LXGW WenKai */
-@font-face {
-    font-family: 'AC-UI';
-    src: local('Nunito Variable');
-    unicode-range: U+0020-007E, U+00A0-024F, U+1E00-1EFF, U+2000-206F, U+20A0-20CF, U+2100-214F, U+2190-21FF, U+2200-22FF, U+2300-23FF, U+2500-257F, U+25A0-25FF, U+2600-26FF, U+2700-27BF;
-    font-weight: 100 900;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'AC-UI';
-    src: local('LXGW WenKai');
-    unicode-range: U+4E00-9FFF, U+3400-4DBF, U+20000-2FA1F, U+F900-FAFF, U+2E80-2EFF, U+2F00-2FDF, U+3000-303F, U+31C0-31EF, U+3200-32FF, U+3300-33FF, U+FE30-FE4F, U+FF00-FFEF;
-    font-weight: 100 900;
-    font-display: swap;
+    /* Latin → Nunito, CJK → HarmonyOS Sans SC */
+    --ac-font: 'Nunito Variable', 'HarmonyOS Sans SC', sans-serif;
 }
 
 /* AC 3D press-down button effect */
