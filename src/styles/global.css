@@ -145,5 +145,13 @@ code, kbd, samp, pre {
 html,
 body {
     font-family: var(--ac-font) !important;
+    /* Bump only Latin (Nunito, variable). HarmonyOS is non-variable so ignores wght. */
+    font-variation-settings: 'wght' 500;
     background-color: var(--ac-bg);
+}
+
+/* Restore normal wght behavior where CSS font-weight already signals bold,
+   otherwise the body's 'wght' override would clamp headings at 500. */
+.font-bold, b, strong, h1, h2, h3, h4, h5, h6 {
+    font-variation-settings: normal;
 }
