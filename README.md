@@ -41,9 +41,9 @@ Open `http://localhost:4321` in your browser.
 ### 1. Site info — `src/config.ts`
 
 ```ts
-export const SITE_TITLE = "Your Name";       // Used in header, sidebar, page titles
-export const AUTHOR_NAME = "Your Name";       // Used in footer copyright
-export const AUTHOR_INITIAL = "YN";           // Used in page title prefixes
+export const SITE_TITLE = "Your Name"; // Used in header, sidebar, page titles
+export const AUTHOR_NAME = "Your Name"; // Used in footer copyright
+export const AUTHOR_INITIAL = "YN"; // Used in page title prefixes
 export const SITE_DESCRIPTION = "Your Name's personal website.";
 ```
 

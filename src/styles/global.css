@@ -1,157 +1,169 @@
 /* Animal Crossing Design Tokens */
 :root {
-    /* Primary palette — Misc color */
-    --ac-primary: #2abaaa;
-    --ac-primary-light: #6dd5c8;
-    --ac-primary-dark: #1f9489;
+  /* Primary palette — Misc color */
+  --ac-primary: #2abaaa;
+  --ac-primary-light: #6dd5c8;
+  --ac-primary-dark: #1f9489;
 
-    /* Warm neutrals — Day color */
-    --ac-cream: #f7f3e7;
-    --ac-cream-dark: #ece6d4;
-    --ac-sand: #ddd6c0;
-    --ac-wood: #c4a46c;
-    --ac-wood-dark: #a8894e;
+  /* Warm neutrals — Day color */
+  --ac-cream: #f7f3e7;
+  --ac-cream-dark: #ece6d4;
+  --ac-sand: #ddd6c0;
+  --ac-wood: #c4a46c;
+  --ac-wood-dark: #a8894e;
 
-    /* Text colors */
-    --ac-text: #877358;
-    --ac-text-light: #a69580;
-    --ac-text-dark: #6b5c48;
-    --ac-text-white: #ffffff;
+  /* Text colors */
+  --ac-text: #877358;
+  --ac-text-light: #a69580;
+  --ac-text-dark: #6b5c48;
+  --ac-text-white: #ffffff;
 
-    /* Accent colors */
-    --ac-green: #8bc34a;
-    --ac-green-light: #c5e1a5;
-    --ac-pink: #f48fb1;
-    --ac-yellow: #fff176;
-    --ac-orange: #ffb74d;
-    --ac-brown: #8d6e63;
+  /* Accent colors */
+  --ac-green: #8bc34a;
+  --ac-green-light: #c5e1a5;
+  --ac-pink: #f48fb1;
+  --ac-yellow: #fff176;
+  --ac-orange: #ffb74d;
+  --ac-brown: #8d6e63;
 
-    /* UI surface colors */
-    --ac-bg: #f7f3e7;
-    --ac-surface: #ffffff;
-    --ac-surface-hover: #faf7ef;
-    --ac-border: #ddd6c0;
+  /* UI surface colors */
+  --ac-bg: #f7f3e7;
+  --ac-surface: #ffffff;
+  --ac-surface-hover: #faf7ef;
+  --ac-border: #ddd6c0;
 
-    /* Shadows */
-    --ac-shadow: 0 2px 8px rgba(135, 115, 88, 0.12);
-    --ac-shadow-hover: 0 4px 16px rgba(135, 115, 88, 0.2);
-    --ac-shadow-inset: inset 0 2px 4px rgba(135, 115, 88, 0.15);
+  /* Shadows */
+  --ac-shadow: 0 2px 8px rgba(135, 115, 88, 0.12);
+  --ac-shadow-hover: 0 4px 16px rgba(135, 115, 88, 0.2);
+  --ac-shadow-inset: inset 0 2px 4px rgba(135, 115, 88, 0.15);
 
-    /* Border radius */
-    --ac-radius-sm: 8px;
-    --ac-radius-md: 14px;
-    --ac-radius-lg: 20px;
-    --ac-radius-xl: 28px;
-    --ac-radius-full: 9999px;
+  /* Border radius */
+  --ac-radius-sm: 8px;
+  --ac-radius-md: 14px;
+  --ac-radius-lg: 20px;
+  --ac-radius-xl: 28px;
+  --ac-radius-full: 9999px;
 
-    /* Transitions */
-    --ac-transition: all 0.2s ease;
+  /* Transitions */
+  --ac-transition: all 0.2s ease;
 
-    /* Latin → Nunito, CJK → HarmonyOS Sans SC */
-    --ac-font: 'Nunito Variable', 'HarmonyOS Sans SC', sans-serif;
-    --ac-font-mono: 'Maple Mono CN', ui-monospace, SFMono-Regular, Menlo, monospace;
+  /* Latin → Nunito, CJK → HarmonyOS Sans SC */
+  --ac-font: "Nunito Variable", "HarmonyOS Sans SC", sans-serif;
+  --ac-font-mono:
+    "Maple Mono CN", ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
-code, kbd, samp, pre {
-    font-family: var(--ac-font-mono);
-    font-size: 0.9em;
+code,
+kbd,
+samp,
+pre {
+  font-family: var(--ac-font-mono);
+  font-size: 0.9em;
 }
 
 /* AC 3D press-down button effect */
 .btn-ac {
-    position: relative;
-    background-color: var(--ac-primary);
-    color: #ffffff;
-    border: 3px solid var(--ac-primary-dark);
-    border-radius: var(--ac-radius-md);
-    box-shadow: 0 4px 0 var(--ac-primary-dark);
-    transition: all 0.1s ease;
-    font-weight: 500;
-    padding: 0.5rem 1.5rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+  position: relative;
+  background-color: var(--ac-primary);
+  color: #ffffff;
+  border: 3px solid var(--ac-primary-dark);
+  border-radius: var(--ac-radius-md);
+  box-shadow: 0 4px 0 var(--ac-primary-dark);
+  transition: all 0.1s ease;
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .btn-ac:hover {
-    background-color: var(--ac-primary-light);
-    transform: translateY(-1px);
-    box-shadow: 0 5px 0 var(--ac-primary-dark);
+  background-color: var(--ac-primary-light);
+  transform: translateY(-1px);
+  box-shadow: 0 5px 0 var(--ac-primary-dark);
 }
 
 .btn-ac:active {
-    transform: translateY(3px);
-    box-shadow: 0 1px 0 var(--ac-primary-dark);
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 var(--ac-primary-dark);
 }
 
 /* Rounded images in prose content (blog posts, notes) */
 .prose img {
-    border-radius: var(--ac-radius-lg);
+  border-radius: var(--ac-radius-lg);
 }
 
 /* Night theme overrides */
 [data-theme="night"] {
-    --ac-primary: #2abaaa;
-    --ac-primary-light: #5dd4c8;
-    --ac-primary-dark: #1f9489;
+  --ac-primary: #2abaaa;
+  --ac-primary-light: #5dd4c8;
+  --ac-primary-dark: #1f9489;
 
-    --ac-cream: #374063;
-    --ac-cream-dark: #2d3554;
-    --ac-sand: #4a5580;
-    --ac-wood: #7a6f5c;
-    --ac-wood-dark: #5e5446;
+  --ac-cream: #374063;
+  --ac-cream-dark: #2d3554;
+  --ac-sand: #4a5580;
+  --ac-wood: #7a6f5c;
+  --ac-wood-dark: #5e5446;
 
-    --ac-text: #e2d6c8;
-    --ac-text-light: #b8ad9e;
-    --ac-text-dark: #f0e8dc;
+  --ac-text: #e2d6c8;
+  --ac-text-light: #b8ad9e;
+  --ac-text-dark: #f0e8dc;
 
-    --ac-bg: #374063;
-    --ac-surface: #2d3554;
-    --ac-surface-hover: #4a5580;
-    --ac-border: #4a5580;
+  --ac-bg: #374063;
+  --ac-surface: #2d3554;
+  --ac-surface-hover: #4a5580;
+  --ac-border: #4a5580;
 
-    --ac-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-    --ac-shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.35);
-    --ac-shadow-inset: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+  --ac-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  --ac-shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.35);
+  --ac-shadow-inset: inset 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 [data-theme="night"] .divider {
-    background-image: url("/divider_line.png");
+  background-image: url("/divider_line.png");
 }
 
 /* AC-themed dividers using decorative image */
 .divider {
-    opacity: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: var(--divider-img, url("/divider_line.png"));
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    min-height: 2rem;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: var(--divider-img, url("/divider_line.png"));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  min-height: 2rem;
 }
 
 .divider:before,
 .divider:after {
-    display: none;
+  display: none;
 }
 
-.time-line-container>div:last-child .education__time>.education__line {
-    display: none;
+.time-line-container > div:last-child .education__time > .education__line {
+  display: none;
 }
 
 html,
 body {
-    font-family: var(--ac-font) !important;
-    /* Bump only Latin (Nunito, variable). HarmonyOS is non-variable so ignores wght. */
-    font-variation-settings: 'wght' 500;
-    background-color: var(--ac-bg);
+  font-family: var(--ac-font) !important;
+  /* Bump only Latin (Nunito, variable). HarmonyOS is non-variable so ignores wght. */
+  font-variation-settings: "wght" 500;
+  background-color: var(--ac-bg);
 }
 
 /* Restore normal wght behavior where CSS font-weight already signals bold,
    otherwise the body's 'wght' override would clamp headings at 500. */
-.font-bold, b, strong, h1, h2, h3, h4, h5, h6 {
-    font-variation-settings: normal;
+.font-bold,
+b,
+strong,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-variation-settings: normal;
 }
