@@ -61,6 +61,20 @@ pre {
   font-size: 0.9em;
 }
 
+/* Theme-aware visibility. data-theme is set by an inline <head> script before
+   first paint, so the correct variant renders immediately — no flash, no JS
+   src swapping. Both variants download once and stay cached, so toggling the
+   theme is instant. */
+.show-dark {
+    display: none;
+}
+[data-theme="night"] .show-light {
+    display: none;
+}
+[data-theme="night"] .show-dark {
+    display: block;
+}
+
 /* AC 3D press-down button effect */
 .btn-ac {
   position: relative;
@@ -118,10 +132,6 @@ pre {
   --ac-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   --ac-shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.35);
   --ac-shadow-inset: inset 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-[data-theme="night"] .divider {
-  background-image: url("/divider_line.png");
 }
 
 /* AC-themed dividers using decorative image */

@@ -15,8 +15,10 @@ import { url } from "../config";
         aria-label="Toggle theme"
         title="Toggle theme"
     >
-        <img id="theme-icon" src={url('leaf_light.png')} alt="" class="w-5 h-5 rounded-ac-sm" />
-        <span id="theme-label">Dark Mode</span>
+        <img src={url('leaf_dark.png')} alt="" class="w-5 h-5 rounded-ac-sm show-light" />
+        <img src={url('leaf_light.png')} alt="" class="w-5 h-5 rounded-ac-sm show-dark" />
+        <span class="show-light">Dark Mode</span>
+        <span class="show-dark">Light Mode</span>
     </button>
 </div>
 
