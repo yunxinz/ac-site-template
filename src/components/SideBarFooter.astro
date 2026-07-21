@@ -1,14 +1,23 @@
 ---
 import { url } from "../config";
+
+const socials = [
+    { label: "GitHub", href: "https://github.com/yourusername", icon: "news.png" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/yourusername", icon: "brewster.png" },
+    { label: "WhatsApp", href: "#", icon: "whatsapp.png" },
+    { label: "Instagram", href: "https://www.instagram.com/yourusername/", icon: "instagram.png" },
+];
 ---
 
+{/* Desktop footer — gradient mask + full-width theme toggle + vertical social
+     list. Each element keeps its original sticky-bottom behavior because they
+     render as direct flex children of <aside> (only shown at lg+). */}
 <div
-    class="block sticky pointer-events-none bottom-10 bg-ac-cream-dark justify-center h-12 [mask-image:linear-gradient(transparent,#000000)]"
+    class="hidden lg:block sticky pointer-events-none bottom-10 bg-ac-cream-dark justify-center h-12 [mask-image:linear-gradient(transparent,#000000)]"
 >
 </div>
 
-<!-- Theme toggle -->
-<div class="px-4 pb-2 sticky bottom-[52px] bg-ac-cream-dark">
+<div class="hidden lg:block px-4 pb-2 sticky bottom-[52px] bg-ac-cream-dark">
     <button
         onclick="toggleTheme()"
         class="flex items-center gap-2 px-3 py-1.5 w-full rounded-ac-md transition-colors hover:bg-ac-sand text-sm"
@@ -23,49 +32,44 @@ import { url } from "../config";
 </div>
 
 <div
-    class="social-icons px-4 pb-5 pt-1 flex flex-col items-start sticky bottom-0 bg-ac-cream-dark gap-1"
+    class="hidden lg:flex flex-col items-start px-4 pb-5 pt-1 sticky bottom-0 bg-ac-cream-dark gap-1"
 >
-    <a
-        href="https://github.com/yourusername"
-        target="_blank"
-        class="flex items-center gap-2 px-3 py-1.5 rounded-ac-md transition-colors hover:bg-ac-sand text-sm"
-        aria-label="GitHub"
-        title="GitHub"
-    >
-        <img src={url('news.png')} alt="GitHub" class="w-5 h-5 rounded-ac-sm" />
-        <span>GitHub</span>
-    </a>
+    {socials.map((s) => (
+        <a
+            href={s.href}
+            target="_blank"
+            class="flex items-center gap-2 px-3 py-1.5 rounded-ac-md transition-colors hover:bg-ac-sand text-sm"
+            aria-label={s.label}
+            title={s.label}
+        >
+            <img src={url(s.icon)} alt={s.label} class="w-5 h-5 rounded-ac-sm" />
+            <span>{s.label}</span>
+        </a>
+    ))}
+</div>
 
-    <a
-        href="https://www.linkedin.com/in/yourusername"
-        target="_blank"
-        class="flex items-center gap-2 px-3 py-1.5 rounded-ac-md transition-colors hover:bg-ac-sand text-sm"
-        aria-label="LinkedIn"
-        title="LinkedIn"
+{/* Mobile footer — one compact row of icon-only buttons. Collapses the entire
+     footer to a single line so short viewports stop squeezing the menu above
+     and force-scrolling to reach the links. */}
+<div class="flex lg:hidden shrink-0 items-center justify-around gap-1 bg-ac-cream-dark px-3 pt-2 pb-4">
+    <button
+        onclick="toggleTheme()"
+        class="flex items-center justify-center w-10 h-10 rounded-ac-md transition-colors hover:bg-ac-sand"
+        aria-label="Toggle theme"
+        title="Toggle theme"
     >
-        <img src={url('brewster.png')} alt="LinkedIn" class="w-5 h-5 rounded-ac-sm" />
-        <span>LinkedIn</span>
-    </a>
-
-    <a
-        href="#"
-        target="_blank"
-        class="flex items-center gap-2 px-3 py-1.5 rounded-ac-md transition-colors hover:bg-ac-sand text-sm"
-        aria-label="WhatsApp"
-        title="WhatsApp"
-    >
-        <img src={url('whatsapp.png')} alt="WhatsApp" class="w-5 h-5 rounded-ac-sm" />
-        <span>WhatsApp</span>
-    </a>
-
-    <a
-        href="https://www.instagram.com/yourusername/"
-        target="_blank"
-        class="flex items-center gap-2 px-3 py-1.5 rounded-ac-md transition-colors hover:bg-ac-sand text-sm"
-        aria-label="Instagram"
-        title="Instagram"
-    >
-        <img src={url('instagram.png')} alt="Instagram" class="w-5 h-5 rounded-ac-sm" />
-        <span>Instagram</span>
-    </a>
+        <img src={url('leaf_dark.png')} alt="" class="w-5 h-5 rounded-ac-sm show-light" />
+        <img src={url('leaf_light.png')} alt="" class="w-5 h-5 rounded-ac-sm show-dark" />
+    </button>
+    {socials.map((s) => (
+        <a
+            href={s.href}
+            target="_blank"
+            class="flex items-center justify-center w-10 h-10 rounded-ac-md transition-colors hover:bg-ac-sand"
+            aria-label={s.label}
+            title={s.label}
+        >
+            <img src={url(s.icon)} alt={s.label} class="w-5 h-5 rounded-ac-sm" />
+        </a>
+    ))}
 </div>

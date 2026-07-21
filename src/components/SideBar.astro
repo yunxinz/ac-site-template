@@ -9,14 +9,14 @@ const { sideBarActiveItemID } = Astro.props;
 <div class="drawer-side z-40">
     <label for="my-drawer" class="drawer-overlay"></label>
     <aside
-        class="px-2 pt-2 h-auto min-h-full w-[19rem] bg-ac-cream-dark text-ac-text flex flex-col"
+        class="px-2 pt-2 h-[100dvh] lg:h-auto lg:min-h-full w-[19rem] bg-ac-cream-dark text-ac-text flex flex-col"
     >
-        <div class="w-fit mx-auto mt-5 mb-6">
+        <div class="w-fit mx-auto mt-3 mb-4 lg:mt-5 lg:mb-6 shrink-0">
             <a href={url('')}>
                 <div
                     class="avatar transition ease-in-out hover:scale-[102%] block m-auto"
                 >
-                    <div class="w-[8.5rem] overflow-hidden">
+                    <div class="w-[6rem] lg:w-[8.5rem] overflow-hidden">
                         <Image
                             class="mask mask-circle"
                             format="webp"
@@ -29,7 +29,12 @@ const { sideBarActiveItemID } = Astro.props;
                 </div>
             </a>
         </div>
-        <SideBarMenu sideBarActiveItemID={sideBarActiveItemID} />
+        {/* On mobile the menu scrolls in its own region so the footer below never
+            overlaps it; on lg the wrapper dissolves (contents) and the footer
+            regains its sticky-to-viewport behavior. */}
+        <div class="flex-1 min-h-0 overflow-y-auto lg:contents">
+            <SideBarMenu sideBarActiveItemID={sideBarActiveItemID} />
+        </div>
         <SideBarFooter />
     </aside>
 </div>
