@@ -75,6 +75,12 @@ pre {
     display: block;
 }
 
+/* Reserve the scrollbar track on every page so centered content doesn't shift
+   horizontally when navigating between short (no scrollbar) and long pages. */
+html {
+    scrollbar-gutter: stable;
+}
+
 /* AC 3D press-down button effect */
 .btn-ac {
   position: relative;
