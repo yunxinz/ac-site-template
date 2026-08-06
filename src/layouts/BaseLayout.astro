@@ -42,8 +42,8 @@ const {
             <input id="my-drawer" type="checkbox" class="drawer-toggle" />
             <div class="drawer-content bg-base-100 rounded-tl-ac-xl relative min-h-screen flex flex-col">
                 <div class="w-full overflow-hidden pointer-events-none select-none">
-                    <img src={url('header_banner_light.png')} alt="" width="3840" height="195" decoding="async" class="w-full show-light" />
-                    <img src={url('header_banner_dark.png')} alt="" width="3840" height="195" decoding="async" class="w-full show-dark" />
+                    <img src={url('header_banner_light.png')} alt="" width="3840" height="195" decoding="async" class="w-full object-cover object-center h-[clamp(3rem,4vw,5rem)] lg:h-auto show-light" />
+                    <img src={url('header_banner_dark.png')} alt="" width="3840" height="195" decoding="async" class="w-full object-cover object-center h-[clamp(3rem,4vw,5rem)] lg:h-auto show-dark" />
                 </div>
                 <Header title={SITE_TITLE} />
                 <div class="md:flex md:justify-center flex-1 w-full">
@@ -54,8 +54,8 @@ const {
                 <Footer />
 
                 <div class="w-full overflow-hidden pointer-events-none select-none flex justify-end mt-auto">
-                    <img src={url('banner_light.png')} alt="" width="3840" height="523" decoding="async" class="w-full show-light" />
-                    <img src={url('banner_dark.png')} alt="" width="3840" height="521" decoding="async" class="w-full show-dark" />
+                    <img src={url('banner_light.png')} alt="" width="3840" height="523" decoding="async" class="w-full object-cover object-right-bottom h-[clamp(5rem,11vw,15rem)] lg:h-auto show-light" />
+                    <img src={url('banner_dark.png')} alt="" width="3840" height="521" decoding="async" class="w-full object-cover object-right-bottom h-[clamp(5rem,11vw,15rem)] lg:h-auto show-dark" />
                 </div>
             </div>
             {
