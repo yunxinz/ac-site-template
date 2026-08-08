@@ -35,10 +35,25 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Compute base path
+        # Auto-derive BASE_URL so any clone deploys without editing this file:
+        # a user/org site (<owner>.github.io) serves from "/", everything else
+        # (project sites) from "/<repo>/".
+        id: base
+        env:
+          REPO: ${{ github.event.repository.name }}
+          OWNER: ${{ github.repository_owner }}
+        run: |
+          if [ "$REPO" = "$OWNER.github.io" ]; then
+            echo "base=/" >> "$GITHUB_OUTPUT"
+          else
+            echo "base=/$REPO/" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Build site
         run: pnpm build
         env:
-          BASE_URL: /ac-site-template/
+          BASE_URL: ${{ steps.base.outputs.base }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
