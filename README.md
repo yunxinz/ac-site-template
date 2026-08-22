@@ -1,3 +1,5 @@
+English | [中文](README.zh.md)
+
 # Animal Crossing Personal Site Template
 
 A cozy, Animal Crossing-themed personal website built with **Astro**, **TailwindCSS**, and **DaisyUI**. Features a warm cream palette, NookPhone-style sidebar navigation, light/dark mode, and charming rounded aesthetics.
@@ -169,10 +171,9 @@ Fonts are composed via CSS `@font-face` with `unicode-range` in `src/styles/glob
 
 A GitHub Actions workflow is included at `.github/workflows/deploy.yml`.
 
-1. Push your code to a `gh-pages` branch
-2. The workflow builds the site and deploys to GitHub Pages
-3. Set `BASE_URL` in the workflow to match your repo name (e.g., `/your-repo/`)
-4. Update `site` in `astro.config.mjs` to your GitHub Pages URL
+1. Push your code to the `main` branch — the workflow builds the site and deploys to GitHub Pages automatically
+2. The base path is derived from your repo name automatically, so no `BASE_URL` configuration is needed
+3. Update `site` in `astro.config.mjs` to your GitHub Pages URL
 
 For a custom domain, add a `CNAME` file to `public/` and update the `site` field.
 
