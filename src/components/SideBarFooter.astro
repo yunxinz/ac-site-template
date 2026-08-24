@@ -10,14 +10,13 @@ const socials = [
 ---
 
 {/* Desktop footer — gradient mask + full-width theme toggle + vertical social
-     list. Each element keeps its original sticky-bottom behavior because they
-     render as direct flex children of <aside> (only shown at lg+). */}
+     list, pinned to the sidebar bottom by the flex column (only shown at lg+). */}
 <div
-    class="hidden lg:block sticky pointer-events-none bottom-10 bg-ac-cream-dark justify-center h-12 [mask-image:linear-gradient(transparent,#000000)]"
+    class="hidden lg:block shrink-0 pointer-events-none bg-ac-cream-dark justify-center h-12 [mask-image:linear-gradient(transparent,#000000)]"
 >
 </div>
 
-<div class="hidden lg:block px-4 pb-2 sticky bottom-[52px] bg-ac-cream-dark">
+<div class="hidden lg:block shrink-0 px-4 pb-2 bg-ac-cream-dark">
     <button
         onclick="toggleTheme()"
         class="flex items-center gap-2 px-3 py-1.5 w-full rounded-ac-md transition-colors hover:bg-ac-sand text-sm"
@@ -32,7 +31,7 @@ const socials = [
 </div>
 
 <div
-    class="hidden lg:flex flex-col items-start px-4 pb-5 pt-1 sticky bottom-0 bg-ac-cream-dark gap-1"
+    class="hidden lg:flex shrink-0 flex-col items-start px-4 pb-5 pt-1 bg-ac-cream-dark gap-1"
 >
     {socials.map((s) => (
         <a

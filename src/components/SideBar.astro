@@ -9,7 +9,7 @@ const { sideBarActiveItemID } = Astro.props;
 <div class="drawer-side z-40">
     <label for="my-drawer" class="drawer-overlay"></label>
     <aside
-        class="px-2 pt-2 h-[100dvh] lg:h-auto lg:min-h-full w-[19rem] bg-ac-cream-dark text-ac-text flex flex-col"
+        class="px-2 pt-2 h-[100dvh] w-[19rem] bg-ac-cream-dark text-ac-text flex flex-col"
     >
         <div class="w-fit mx-auto mt-3 mb-4 lg:mt-5 lg:mb-6 shrink-0">
             <a href={url('')}>
@@ -29,10 +29,11 @@ const { sideBarActiveItemID } = Astro.props;
                 </div>
             </a>
         </div>
-        {/* On mobile the menu scrolls in its own region so the footer below never
-            overlaps it; on lg the wrapper dissolves (contents) and the footer
-            regains its sticky-to-viewport behavior. */}
-        <div class="flex-1 min-h-0 overflow-y-auto lg:contents">
+        {/* The menu scrolls in its own region at every breakpoint so the footer
+            below stays pinned to the sidebar bottom. daisyUI's .drawer-side is
+            always a 100dvh overflow-auto box, so the sidebar must manage its own
+            height instead of relying on sticky offsets. */}
+        <div class="flex-1 min-h-0 overflow-y-auto">
             <SideBarMenu sideBarActiveItemID={sideBarActiveItemID} />
         </div>
         <SideBarFooter />
