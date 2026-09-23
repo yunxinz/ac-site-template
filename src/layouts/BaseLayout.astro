@@ -6,6 +6,9 @@ import SideBar from "../components/SideBar.astro";
 import { ViewTransitions } from "astro:transitions";
 
 import { SITE_TITLE, SITE_DESCRIPTION, TRANSITION_API, url } from "../config";
+// Theme-critical CSS is inlined (not bundled) so theme correctness never
+// depends on the large shared stylesheet arriving — see theme.css.
+import themeCss from "../styles/theme.css?raw";
 
 const {
     image,
@@ -29,6 +32,7 @@ const {
         />
         {TRANSITION_API && <ViewTransitions />}
         <Fragment set:html={`<style is:inline>:root{--divider-img:url("${url('divider_line.png')}")}</style>`} />
+        <style is:inline set:html={themeCss} />
         <script is:inline>
             (function(){
                 var t = localStorage.getItem('theme');
@@ -72,13 +76,17 @@ const {
                 document.documentElement.setAttribute('data-theme', next);
                 localStorage.setItem('theme', next);
             };
-            // Re-apply after Astro View Transitions page swap. This inline script
-            // re-runs on every navigation, so guard against duplicate listeners.
+            // Re-apply after Astro View Transitions page swap: the swap replaces
+            // <html> attributes with the fetched document's, which has no
+            // data-theme (it is only ever set at runtime), so re-derive it the
+            // same way the <head> script does. This inline script re-runs on
+            // every navigation, so guard against duplicate listeners.
             if (!window.__themeSwapBound) {
                 window.__themeSwapBound = true;
                 document.addEventListener('astro:after-swap', function() {
                     var t = localStorage.getItem('theme');
-                    if (t) document.documentElement.setAttribute('data-theme', t);
+                    if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'night' : 'nord';
+                    document.documentElement.setAttribute('data-theme', t);
                 });
             }
         </script>
